@@ -76,3 +76,17 @@ const scrollActive = () => {
 
 window.addEventListener('scroll', scrollActive);
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 300,
+    // reset: true,
+})
+
+sr.reveal(`.home__data, popular__container, .footer`)
+sr.reveal(`.home__banner`, {delay: 700, distance:'100px', origin: 'right'})
+sr.reveal(`.about__data`, {origin: 'right'})
+sr.reveal(`.about__img`, {origin: 'left'})
+sr.reveal(`.products__card`, {interval: 100})
