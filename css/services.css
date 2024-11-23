@@ -68,7 +68,7 @@
 }
 
 .image-container {
-  min-height: 60px;
+  min-height: 100px;
   flex-grow: 4; /* Las imágenes ocupan más espacio que el texto */
   background-size: cover;
   background-position: center;
