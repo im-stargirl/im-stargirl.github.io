@@ -19,7 +19,6 @@
   
   gap: 20px; /* Separación entre columnas */
   width: 100vw; /* Anchura completa */
-  height: 100vh; /* Altura completa */
   padding: 20px;
 }
 
@@ -28,7 +27,7 @@
   .grid-container {
     grid-template-columns: repeat(1, 1fr); /* Cuatro columnas iguales */
     width: 80vw;
-    height: 130vh;
+    min-height: 120vh;
     margin: 0 auto;
   }
 }
@@ -352,8 +351,12 @@ text-decoration: underline;
   padding-top: 0px;
 }
 
+.single-details h4{
+ font-size: 1.5rem;
+}
+
 .single-details{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .single-details button{
