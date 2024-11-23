@@ -15,14 +15,16 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/prueba.css">
+      <link rel="stylesheet" href="css/services.css">
 
-      <title>Responsive pizza website - Bedimcode</title>
+      <title>Crea e inspira</title>
    </head>
    <body>
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
+        <nav class="nav container-nav">
+            <a href="./index3.html" class="nav__logo">
                 <h3>Crea e Inspira</h3>
             </a>
 
@@ -32,16 +34,13 @@
                        <a href="#home" class="nav__link active-link">Home</a>
                    </li>
                    <li>
-                       <a href="#about" class="nav__link">About Us</a>
+                       <a href="./shop.html" class="nav__link">Shop</a>
                    </li>
                    <li>
-                       <a href="#popular" class="nav__link">Popular</a>
+                       <a href="#popular" class="nav__link">Blog</a>
                    </li>
                    <li>
-                       <a href="#products" class="nav__link">Products</a>
-                   </li>
-                   <li>
-                       <a href="#contac" class="nav__link">Contact</a>
+                       <a href="#products" class="nav__link">Contact</a>
                    </li>
                </ul>
     
@@ -49,15 +48,44 @@
                 <div class="nav__close" id="nav-close">
                    <i class="ri-close-large-line"></i>
                 </div>
+
+                <div class="nav__login-cart">
+                    <div class="login">
+                        <i class="ri-login-box-line"></i> 
+                        <a href="login.html">Iniciar Sesion</a>
+                    </div>
+                    <div class="cart">
+                        <i class="ri-shopping-cart-line"></i>
+                        <a href="">Carrito</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Login & Cart -->
+
 
             <!-- Toggle btn -->
             <div class="nav__toggle" id="nav-toggle">
                 <i class="ri-apps-2-fill"></i>
                 </div>
         </nav>
+        
+<!-- 
+        <div class="nav__login-cart">
+            <div class="user-info" id="userInfo">
+                <img src="https://via.placeholder.com/200x300?text=x" alt="User Photo" class="user-photo">
+                <span class="user-name" id="userName">Jesus David</span>
+            </div>
+            <div class="logout-menu" id="logoutMenu">
+                <a href="profile.html">Perfil</a>
+                <a href="javascript:void(0);" onclick="logout()">Cerrar sesión</a>
+            </div>
+        </div> -->
+        
 
       </header>
+
+
 
       <!--==================== MAIN ====================-->
       <main class="main">
@@ -74,23 +102,26 @@
                         Personaliza tus momentos, regala creatividad
                     </p>
 
-                    <a href="#products" class="button">
+                    <a href="./shop.html" class="button">
                         Comprar
                     </a>
 
                 </div>
 
+
+
                 <div class="home__images">
-                    <img src="assets/images/1.jpg" alt="image" class="home__banner">
+                    <img src="assets/images/about us.png" alt="image" class="home__banner">
                 </div>
             </div>
          </section>
 
          <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
+            <h2 class="section__title">Sobre Nosotros </h2>
             <div class="about__container container grid">
                 <div class="about__data">
-                    <h2 class="section__title">Sobre Nosotros </h2>
+                    
 
                     <p class="about__description">
                         En <strong>Crea e Inspira</strong>, creemos que cada detalle importa. Nos especializamos en crear productos únicos y personalizados para esos momentos especiales. Ya sea un regalo para un ser querido, un detalle para tu hogar, o un recuerdo especial para tu negocio, nosotros lo hacemos posible.
@@ -102,108 +133,216 @@
                         Nuestra misión es ayudarte a crear recuerdos inolvidables a través de productos únicos, hechos con amor y dedicación. ¡En <strong>Crea e Inspira</strong>, la imaginación no tiene límites!
                     </p>
 
-                    <a href="#popular" class="button">
+                    <a href="#intento" class="button">
                         Los mejores productos
                     </a>
                 </div>
+
+<!--                 <div>
+                    <img src="/assets/images/about us.png" class="about__img" alt = "imgage">
+                </div> -->
+
+                <div class="card-container">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
             </div>
 
-            <img src="assets/images/1.jpg" alt="image" class="about__img">
+            <!-- <img src="assets/images/1.jpg" alt="image" class="about__img"> -->
          </section>
 
+
+         
+
          <!--==================== POPULAR ====================-->
+
+         
+
          <section class="popular section" id="popular">
             <div class="popular__container container grid">
                 <div class="popular__data">
                     <h2 class="section__title">
                         Nuestros Servicios
                     </h2>
-                    
-                    <p class="popular__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima accusamus tempore a suscipit iste dolorum maiores. Mollitia accusantium fuga voluptatem. Nisi eaque maiores cumque quisquam ad corporis eveniet fugit accusamus?
-                    </p>
+                    <a href="./shop.html" class="popular__description">Ver todos los productos ➡</a>
                 </div>
 
-                <div class="popular__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/images/1.jpg" alt="image" class="popular__img">
-                            <h3 class="popular__title">tazas</h3>
-                            <p>
-                                ⭐⭐⭐⭐⭐ <br>
-                                precio
-                            </p>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/images/1.jpg" alt="image" class="popular__img">
-                            <h3 class="popular__title">Sueter</h3>
-                            <p>
-                                ⭐⭐⭐⭐⭐ <br>
-                                precio
-                            </p>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/images/1.jpg" alt="image" class="popular__img">
-                            <h3 class="popular__title">camisetas</h3>
-                            <p>
-                                ⭐⭐⭐⭐⭐ <br>
-                                precio
-                            </p>
-                        </article>
-                        <article class="popular__card swiper-slide">
-                            <img src="assets/images/1.jpg" alt="image" class="popular__img">
-                            <h3 class="popular__title">Bolsos</h3>
-                            <p>
-                                ⭐⭐⭐⭐⭐ <br>
-                                precio
-                            </p>
-                        </article>
+                <div class="grid-container">
+                    <!-- Columna 1 -->
+                    <div class="column column-1">
+                      <div class="content">
+                        <h1>Camisetas</h1>
+                        <p>Personalizadas con diferentes hormas y tallas 
+                            <br>
+                            <strong>Desde $39,000</strong>
+                        </p>
+                        <a href="#" class="btn">Ver más</a>
+                      </div>
+                      <div class="image-container" style="background-color: #f9e79f;"></div>
+                    </div>
+                
+                    <!-- Columna 2 -->
+                    <div class="column column-2">
+                      <div class="image-container" style="background-color: #76d7c4;"></div>
+                      <div class="content">
+                        <h1>Gorras</h1>
+                        <p>De todos los estilos que quieras o puedas imaginar</p>
+                        <p><strong>Desde $20,000</strong></p>
+                        <a href="#" class="btn">Ver más</a>
+                      </div>
+                    </div>
+                
+                    <!-- Columna 3 -->
+                    <div class="column column-3">
+                      <div class="content">
+                        <h1>Totebag</h1>
+                        <p>Lindos totebag personalizados a tu gusto o con estampado de tu interés</p>
+                        <p> <strong>Desde $20,000</strong></p>
+                        <a href="#" class="btn">Ver más</a>
+                      </div>
+                      <div class="image-container" style="background-color: #85c1e9;"></div>
+                    </div>
+                
+                    <!-- Columna 4 -->
+                    <div class="column column-4">
+                        <div class="image-container" style="background-color: #76d7c4;"></div>
+                        <div class="content">
+                          <h1>Tazas</h1>
+                          <p>Nuevas colecciones</p>
+                          <p> <strong>desde $19,000</strong></p>
+                          <a href="#" class="btn">Ver más</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+                
          </section>
+
+         <!-- ============================================= -->
+         <section class="product section" id = "intento">
+            <h2 class="section__title">Los mejores <br> productos</h2>
+            
+            <div class="products__container container grid">
+                <div class="product__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <article class="card_product swiper-slide">
+                            <div class="products__img-container">
+                                <img src="assets/products/product-1.jpg" alt="image" class="products__img">
+                            </div>
+                            <h3 class="products__name">tazas con estampados</h3>
+                            <span class="products__price">$19,000</span>
+                            <button class="products__button">
+                                <i class="ri-shopping-bag-3-fill"></i>
+                            </button>
+                        </article>
+                        <article class="card_product swiper-slide">
+                            <div class="products__img-container">
+                                <img src="assets/products/product-2.jpg" alt="image" class="products__img">
+                            </div>
+                            <h3 class="products__name">totebag personalizadas</h3>
+                            <span class="products__price">$20,000</span>
+                            <button class="products__button">
+                                <i class="ri-shopping-bag-3-fill"></i>
+                            </button>
+                        </article>
+                        <article class="card_product swiper-slide">
+                            <div class="products__img-container">
+                                <img src="assets/products/product-5.jpg" alt="image" class="products__img">
+                            </div>
+                            <h3 class="products__name">Gorras con estampado personalizado</h3>
+                            <span class="products__price">$25,000</span>
+                            <button class="products__button">
+                                <i class="ri-shopping-bag-3-fill"></i>
+                            </button>
+                        </article>
+                        <article class="card_product swiper-slide">
+                            <div class="products__img-container">
+                                <img src="assets/products/product-4.jpg" alt="image" class="products__img">
+                            </div>
+                            <h3 class="products__name">Sueter con estampado de corazón</h3>
+                            <span class="products__price">$39,000</span>
+                            <button class="products__button">
+                                <i class="ri-shopping-bag-3-fill"></i>
+                            </button>
+                        </article>
+                        <article class="card_product swiper-slide">
+                            <div class="products__img-container">
+                                <img src="assets/products/product-9.jpg" alt="image" class="products__img">
+                            </div>
+                            <h3 class="products__name">Gorras con estampado personalizado</h3>
+                            <span class="products__price">$25,000</span>
+                            <button class="products__button">
+                                <i class="ri-shopping-bag-3-fill"></i>
+                            </button>
+                        </article>
+                        <article class="card_product swiper-slide">
+                            <div class="products__img-container">
+                                <img src="assets/products/product-15.jpg" alt="image" class="products__img">
+                            </div>
+                            <h3 class="products__name">Sueter con estampado de corazón</h3>
+                            <span class="products__price">$39,000</span>
+                            <button class="products__button">
+                                <i class="ri-shopping-bag-3-fill"></i>
+                            </button>
+                        </article>
+                        
+                        
+                    </div>
+
+                      <!-- If we need pagination -->
+                      <div class="swiper-pagination"></div>
+
+
+  
+                </div>
+            </div>
+        </section>
+
 
          <!--==================== RECIPE ====================-->
          <section class="recipe section">
-            <h3>Comentarios</h3>
+            <h1 class="section__title">Reseñas</h1>
+            <section class="reviews">
+                <!-- Reseñas existentes -->
+                <div id="reviews-list">
+                    <!-- Las reseñas existentes se mostrarán aquí -->
+                    <div class="review">
+                        <div class="rating">
+                            <span class="star-rating">★★★★★</span>
+                        </div>
+                        <p>Este es un comentario de ejemplo de un usuario anterior.</p>
+                    </div>
+                    <!-- Más reseñas... -->
+                </div>
+            
+                <!-- Formulario de agregar reseña -->
+                <div class="add-review">
+                    <form id="review-form">
+                        <label for="review-rating">Calificación:</label>
+                        <select id="review-rating" name="rating">
+                            <option value="1">★</option>
+                            <option value="2">★★</option>
+                            <option value="3">★★★</option>
+                            <option value="4">★★★★</option>
+                            <option value="5">★★★★★</option>
+                        </select>
+            
+                        <label for="review-input">Tu reseña:</label>
+                        <textarea id="review-input" name="review-text" required></textarea>
+            
+                        <button type="submit">Enviar Reseña</button>
+                    </form>
+                </div>
+            </section>
+            
+            
+            
+            
+            
          </section>
 
          <!--==================== PRODUCTS ====================-->
-         <section class="products section" id="products">
-            <h2 class="section__title">Los mejores <br> productos</h2>
-
-            <div class="products__container container grid">
-                <article class="products__card">
-                    <img src="assets/images/1.jpg" alt="image" class="products__img">
-                    <h3 class="products__name">xx</h3>
-                    <span class="products__price">123</span>
-                    
-                    <button class="products__button">
-                        <i class="ri-shopping-bag-3-fill"></i>
-                    </button>
-                </article>
-
-                <article class="products__card">
-                    <img src="assets/images/1.jpg" alt="image" class="products__img">
-                    <h3 class="products__name">xx</h3>
-                    <span class="products__price">123</span>
-                    
-                    <button class="products__button">
-                        <i class="ri-shopping-bag-3-fill"></i>
-                    </button>
-                </article>
-
-                <article class="products__card">
-                    <img src="assets/images/1.jpg" alt="image" class="products__img">
-                    <h3 class="products__name">xx</h3>
-                    <span class="products__price">123</span>
-                    
-                    <button class="products__button">
-                        <i class="ri-shopping-bag-3-fill"></i>
-                    </button>
-                </article>
-            </div>
-         </section>
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
@@ -253,8 +392,8 @@
          </div>
 
          <div class="footer__policy">
-            <a href="#" class="footer_link">Terminos y Condiciones</a>
-            <a href="#" class="footer_link">Politica de Privacidad</a>
+            <a href="#" class="footer__link">Terminos y Condiciones</a>
+            <a href="#" class="footer__link">Politica de Privacidad</a>
          </div>
 
          <span class="footer__copy">
@@ -276,4 +415,4 @@
       <!--=============== MAIN JS ===============-->
       <script src="js/main.js"></script>
    </body>
-</html>
+</html> 

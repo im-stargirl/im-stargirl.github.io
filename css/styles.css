@@ -108,13 +108,22 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.container-nav {
+    margin-inline: 1.5rem;
+}
+
+.container__home {
+    max-width: 1500px;
+    margin-inline: 1.5rem
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
 }
 
 .section {
@@ -144,9 +153,60 @@ img {
 .nav{
     position: relative;
     height: var(--header-height);
-    display: flex;
+/*     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.nav__menu{
+    display: flex;
+    justify-content: space-between; /* Separa los elementos principales (logo y menú) */
+    align-items: center; /* Alinea los elementos verticalmente */
+    width: 100%;
+    padding: 0 20px; /* Añadir espacio alrededor del menú */
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center; /* Centra las opciones de navegación */
+    flex: 1; /* Ocupa el espacio disponible */
+    list-style: none; /* Elimina los puntos de lista */
+    margin: 0;
+    padding: 0;
+  }
+
+/* Estilo para los botones de login y cart */
+.nav__login-cart {
+    display: flex;
+    justify-content: flex-end; /* Coloca los íconos al final */
+    align-items: center; /* Alinea los íconos verticalmente */
+}
+
+.nav__login-cart .login,
+.nav__login-cart .cart {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-left: 20px; /* Espacio entre los íconos */
+  cursor: pointer;
+}
+
+.nav__login-cart .login i,
+.nav__login-cart .cart i {
+  margin-right: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+.nav__login-cart .login:hover,
+.nav__login-cart .cart:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  color: #C4661F;
 }
 
 .nav__logo{
@@ -165,10 +225,28 @@ img {
     cursor: pointer;
 }
 
+
+
+.logout-menu{
+    display: none;
+    text-align: center;
+}
+
+
+
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px){
+    .nav{
+        position: relative;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .nav__menu{
         position: fixed;
+        display: inline;
         top:-120%;
         left: 0;
         background-color: var(--body-color);
@@ -177,6 +255,23 @@ img {
         box-shadow: 0 4px 16px hsla(353, 100%, 8%, .1);
         transition: top .5s;
     }
+    .nav__login-cart{
+        display: inline;
+    }
+    .login, .cart, .user-info, .logout-menu{
+        text-align: center;
+        justify-self: center;
+    }
+    .login, .cart, .user-info{
+        margin-top: 1.5rem;
+        margin-right: 2.5rem;
+    }
+
+    .logout-menu{
+        display: none;
+    }
+
+
 }
 
 .nav__list{
@@ -186,7 +281,8 @@ img {
     row-gap: 2rem;
 }
 
-.nav__link{
+.nav__link,
+.nav__login-cart a{
     position: relative;
     color: var(--title-color);
     font-family: var(--second-font);
@@ -279,6 +375,8 @@ img {
     background-color: var(--container-color);
 }
 
+
+
 .about__container{
     row-gap: 2rem;
     padding-bottom: 2rem;
@@ -305,18 +403,28 @@ img {
 
 /*=============== POPULAR ===============*/
 .popular__container{
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     row-gap: 3rem;
     padding-bottom: 2rem;
 }
 
-.popular__data .section__title{
-    margin-bottom: 1rem;
-}
 
-.popular__description{
+.popular__data {
     text-align: center;
 }
+
+.popular__data .section__title{
+    margin-bottom: 0;
+}
+
+.popular__description {
+    margin-top: 0;
+    display: inline-block; /* Esto asegura que el enlace respete el centrado */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    text-decoration: underline; /* Elimina el subrayado predeterminado */
+    color: #000; /* Ajusta el color del texto */
+}
+
 
 .popular__swiper{
     position: relative;
@@ -365,7 +473,7 @@ img {
 
 
 /*=============== PRODUCTS ===============*/
-.products__container{
+/* .products__container{
     padding-top: 3.5rem;
     grid-template-columns: repeat(2,1fr);
     gap: 5rem 1.5rem;
@@ -424,7 +532,7 @@ img {
 
 .products__card:hover .products__img{
     transform: translateY(-.5rem);
-}
+} */
 
 
 /*=============== FOOTER ===============*/
@@ -514,6 +622,9 @@ img {
     font-size: var(--small-font-size);
 }
 
+
+
+
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
     width: .6rem;
@@ -568,6 +679,8 @@ img {
         justify-content: center;
     }
 
+    
+
     .footer__form{
         background-color: transparent;
         box-shadow: none;
@@ -589,12 +702,11 @@ img {
     .home__container,
     .about__container,
     .popular__container{
-        grid-template-columns: 380px;
         justify-content: center;
     }
 
     .products__container{
-        grid-template-columns: repeat(2, 160px);
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
     }
     
@@ -611,7 +723,7 @@ img {
     }
 
     .products__container{
-        grid-template-columns: repeat(3,160px);
+        grid-template-columns: repeat(4,160px);
     }
 
     .footer__content{
@@ -641,8 +753,14 @@ img {
         margin-inline: auto;
     }
 
+    .logout-menu{
+        position: absolute;
+    }
+
+
+
     .section{
-        padding-block: 7rem 2rem;
+        padding-block: 5rem 2rem;
     }
     .section__title{
         margin-bottom: 4rem;
@@ -704,15 +822,15 @@ img {
     }
 
     .popular__container{
-        grid-template-columns: 470px;
         row-gap: 5rem;
         padding-bottom: 3rem;
+        
     }
 
-    .popular__data .section__title{
-        margin-bottom: 1.5rem;
+    .grid2{
+        display: grid;
+        gap: 15px;
     }
-
     .popular__swiper{
         width: 1000px;
     }
@@ -728,8 +846,8 @@ img {
     }
 
     .products__container{
-        grid-template-columns: repeat(3, 250px);
-        gap: 7.5rem 4rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 7.5rem 1rem; /*aqui iba 7.5rem 4rem*/
     }
 
     .products__card{
@@ -758,19 +876,21 @@ img {
     }
 
     .footer__content{
+        display: grid;
         grid-template-columns: repeat(3,1fr);
     }
 
-    .footer_content div:nth-child(3){
+
+    .footer__content div:nth-child(3){
         grid-column: initial;
     }
 
-    .footer_content div:nth-child(2){
+    .footer__content div:nth-child(2){
         order:1;
         justify-self: end;
     }
 
-    .footer_content div:nth-child(1){
+    .footer__content div:nth-child(1){
         justify-self: start;
     }
 
@@ -781,3 +901,105 @@ img {
     
 
 }
+
+
+
+#reviews-list {
+    width: 80%;  /* Establece el ancho de la sección de comentarios (puedes ajustar este valor) */
+    max-width: 800px; /* Limita el ancho máximo si es necesario */
+    margin: 0 auto;
+}
+
+.review {
+    width: 100%;  /* Ocupa todo el ancho disponible dentro del contenedor */
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.review {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.review p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Estilos para el formulario de reseña */
+.add-review {
+    width: 100%;  /* Ocupa todo el ancho disponible */
+    padding: 20px;
+    background-color: transparent;  /* Sin fondo */
+    box-shadow: none;  /* Sin sombra */
+}
+
+.add-review form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-review label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.add-review select, 
+.add-review textarea {
+    font-size: 1em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%;
+}
+
+.add-review select:focus,
+.add-review textarea:focus {
+    border-color: #007BFF;
+}
+
+.add-review button {
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-review button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .reviews {
+        padding: 15px;
+    }
+
+    .add-review form {
+        padding: 10px;
+    }
+}
+
