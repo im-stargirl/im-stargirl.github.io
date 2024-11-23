@@ -190,7 +190,6 @@ img {
 
 .nav__login-cart .login,
 .nav__login-cart .cart {
-  display: flex;
   align-items: center;
   padding: 10px 15px;
   margin-left: 20px; /* Espacio entre los íconos */
@@ -713,6 +712,8 @@ img {
     .footer__form{
         width: 360px;
     }
+
+    
 }
 
 @media screen and (min-width: 768px){
