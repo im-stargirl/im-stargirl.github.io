@@ -28,6 +28,7 @@
   .grid-container {
     grid-template-columns: repeat(1, 1fr); /* Cuatro columnas iguales */
     width: 80vw;
+    height: 130vh;
     margin: 0 auto;
   }
 }
